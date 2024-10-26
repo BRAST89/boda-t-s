@@ -1,0 +1,146 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Ajustes globales */
+  body, html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  .tarjeta {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+  
+  /* Estilo para el marco circular */
+  .marco-circular {
+    width: 250px; /* Tamaño inicial */
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 50px; /* Coloca la imagen en la parte superior */
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .marco-circular img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Estilos para cada slide */
+  .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(41, 40, 40, 0.7);
+    color: white;
+    opacity: 0;
+    transition: opacity 1s ease;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .slide h1, .slide h2, .slide p {
+    margin: 10px 0;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  /* Ajustes específicos para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .marco-circular {
+      width: 120px; /* Reducir tamaño en pantallas pequeñas */
+      height: 120px;
+    }
+  
+    .slide {
+      padding: 10px;
+    }
+    
+    .slide h1 {
+      font-size: 1.5em;
+    }
+  
+    .slide h2 {
+      font-size: 1.2em;
+    }
+  
+    .slide p {
+      font-size: 1em;
+    }
+  }
+  
+  /* Ajustes para pantallas extra pequeñas (teléfonos más pequeños) */
+  @media (max-width: 480px) {
+    .marco-circular {
+      width: 100px; /* Tamaño aún más pequeño para celulares */
+      height: 100px;
+    }
+  
+    .slide h1 {
+      font-size: 1.2em;
+    }
+  
+    .slide h2 {
+      font-size: 1em;
+    }
+  
+    .slide p {
+      font-size: 0.9em;
+    }
+  }
+  /* Decoración de flores en los lados */
+/* Decoración de flores en los lados con efecto triangular invertido hacia el centro */
+.flor-izquierda, .flor-derecha {
+    position: absolute;
+    top: 0;
+    width: 80px; /* Ajusta el ancho de las flores según sea necesario */
+    height: 100%;
+    background-size: contain;
+    background-repeat: repeat-y;
+    z-index: 1;
+  }
+  
+  .flor-izquierda {
+    left: 0;
+    background-image: url('images/flor.jpg');
+    clip-path: polygon(100% 0, 0 0, 0 100%); /* Triángulo hacia el centro desde la parte superior derecha */
+  }
+  
+  .flor-derecha {
+    right: 0;
+    background-image: url('images/flor.jpg');
+    clip-path: polygon(0 0, 100% 0, 100% 100%); /* Triángulo hacia el centro desde la parte superior izquierda */
+  }
+  
+  /* Ajuste para que la tarjeta esté encima de las flores */
+  .tarjeta {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+  
+  
