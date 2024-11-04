@@ -91,7 +91,7 @@ body, html {
   }
 
   .titulo p {
-    font-size: 5vw; /* Tamaño más grande en móviles */
+    font-size: 6vw; /* Tamaño más grande en móviles */
   }
 }
 
