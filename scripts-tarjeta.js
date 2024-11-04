@@ -10,7 +10,7 @@ function mostrarLugar() {
       lugarSection.style.display = 'block'; // Mostrar la sección del lugar
       setTimeout(() => {
           lugarSection.style.opacity = 1; // Hacer que aparezca lentamente
-      }, 500); // Retraso breve antes de aplicar la opacidad para suavizar la transición
+      }, 50); // Retraso breve antes de aplicar la opacidad para suavizar la transición
   }, 1500); // Tiempo para que desaparezca completamente
 }
 
@@ -22,7 +22,7 @@ function mostrarContenido() {
       contenido.style.display = 'block'; // Mostrar el contenido
       setTimeout(() => {
           contenido.style.opacity = 1; // Hacer que aparezca lentamente
-      }, 500); // Retraso breve antes de aplicar la opacidad para suavizar la transición
+      }, 50); // Retraso breve antes de aplicar la opacidad para suavizar la transición
   }, 1500); // Tiempo para que desaparezca completamente
 }
 
