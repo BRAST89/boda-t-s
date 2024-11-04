@@ -316,7 +316,7 @@ body, html {
 /* Responsividad */
 @media (max-width: 768px) {
   #vestuario p {
-      font-size: 1rem; /* Tamaño de fuente más pequeño en dispositivos móviles */
+      font-size: 1.5rem; /* Tamaño de fuente más pequeño en dispositivos móviles */
   }
 }
 /* Ajustes para la imagen de vestuario */
