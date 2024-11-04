@@ -15,7 +15,7 @@ body, html {
 
 /* Estilos para la imagen de fondo */
 .imagen-fondo {
-  position: fixed;
+  position: fixed; /* Fijo para que cubra toda la ventana */
   top: 0;
   left: 0;
   width: 100%;
@@ -23,7 +23,7 @@ body, html {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: -1; /* Debe estar detrás de todo */
 }
 
 /* Imagen de fondo para escritorio */
@@ -84,6 +84,7 @@ body, html {
 .titulo p {
   font-size: 2.5vw; /* Aumentado el tamaño responsivo para móviles */
 }
+
 /* Media query para dispositivos móviles */
 @media (max-width: 768px) {
   .titulo h1 {
@@ -106,6 +107,33 @@ body, html {
   }
 }
 
+/* Estilo para la sección del lugar */
+.section {
+  position: absolute;
+  top: 50%; /* Ajustar a la posición deseada */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #5a8b9b; /* Color del texto */
+  z-index: 1; /* Asegurar que esté por encima de la imagen de fondo */
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+  padding: 20px; /* Agregar un poco de padding */
+  border-radius: 10px; /* Opcional: bordes redondeados */
+}
+/* Estilos para mostrar el lugar */
+#lugar.visible {
+  display: block; /* Mostrar la sección del lugar */
+  opacity: 1; /* Hacerlo visible */
+}
+
+/* Responsividad del iframe */
+.section iframe {
+  width: 90%; /* Ancho responsivo */
+  height: auto; /* Mantener proporciones */
+  max-width: 600px; /* Ancho máximo */
+  border: 0; /* Sin borde */
+}
+
 /* Estilo para el efecto de brillo */
 .bright-effect {
   animation: brightness 0.5s forwards;
@@ -125,5 +153,5 @@ body, html {
   width: 100vw;
   height: 100vh;
   position: relative;
+  z-index: 2; /* Asegúrate de que esté por encima de la imagen de fondo */
 }
-
