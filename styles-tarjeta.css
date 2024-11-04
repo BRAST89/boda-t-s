@@ -18,12 +18,12 @@ body, html {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Asegura que cubra todo el ancho */
-  height: 100%; /* Asegura que cubra toda la altura */
-  background-size: cover; /* Mantiene la imagen cubriendo todo el fondo */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita la repetición de la imagen */
-  z-index: -1; /* Coloca la imagen detrás de otros elementos */
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 
 /* Imagen de fondo para escritorio */
@@ -45,14 +45,14 @@ body, html {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Centra el marco en la página */
-  width: 80vw; /* Ancho del marco, se puede ajustar */
-  height: 80vw; /* Alto del marco, se puede ajustar */
-  max-width: 300px; /* Ancho máximo del marco */
-  max-height: 300px; /* Alto máximo del marco */
-  border-radius: 50%; /* Hace que el marco sea circular */
-  border: 10px solid white; /* Color y grosor del borde del marco */
-  overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vw;
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 50%;
+  border: 10px solid white;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,9 +60,29 @@ body, html {
 
 /* Estilo para la foto dentro del marco */
 .foto {
-  width: 100%; /* Hace que la imagen llene todo el marco */
-  height: auto; /* Mantiene la proporción de la imagen */
-  border-radius: 50%; /* Hace que la imagen sea circular */
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Estilos para el título */
+.titulo {
+  position: absolute;
+  top: 10%; /* Ajusta la posición vertical del título */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #5a8b9b; /* Azul claro */
+  font-family: 'Parisienne', cursive; /* Fuente Parisienne */
+}
+
+.titulo h1 {
+  font-size: 3vw; /* Tamaño responsivo */
+  margin-bottom: 5px; /* Espacio entre el título y el mensaje */
+}
+
+.titulo p {
+  font-size: 2vw; /* Tamaño responsivo */
 }
 
 /* Estilo para el efecto de brillo */
@@ -85,6 +105,3 @@ body, html {
   height: 100vh;
   position: relative;
 }
-
-
-
