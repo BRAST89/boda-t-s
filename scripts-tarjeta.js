@@ -31,14 +31,14 @@ function iniciarCiclo() {
     mostrarLugar(); // Mostrar la sección del lugar después de 4 segundos
     setTimeout(() => {
         mostrarContenido(); // Volver a mostrar el contenido después de otros 4 segundos
-    }, 5000); // Tiempo de espera
+    }, 6000); // Tiempo de espera
 }
 
 // Llamar a la función al cargar la página
 window.onload = () => {
     contenido.style.opacity = 1; // Asegurarnos de que el contenido esté visible al inicio
     lugarSection.style.display = 'none'; // Asegurarse de que la sección del lugar no sea visible al inicio
-    setTimeout(iniciarCiclo, 5000); // Iniciar el ciclo después de 4 segundos
+    setTimeout(iniciarCiclo, 6000); // Iniciar el ciclo después de 4 segundos
 };
 
 // Repetir el ciclo indefinidamente
@@ -46,8 +46,8 @@ setInterval(() => {
     mostrarLugar();
     setTimeout(() => {
         mostrarContenido();
-    }, 5000);
-}, 8000); // Cada 8 segundos se repite el ciclo
+    }, 6000);
+}, 12000); // Cada 8 segundos se repite el ciclo
 
 
 

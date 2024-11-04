@@ -136,7 +136,7 @@ body, html {
 
 /* Estilo para el efecto de brillo */
 .bright-effect {
-  animation: brightness 0.5s forwards;
+  animation: brightness 0.8s forwards;
 }
 
 @keyframes brightness {
@@ -155,3 +155,44 @@ body, html {
   position: relative;
   z-index: 2; /* Asegúrate de que esté por encima de la imagen de fondo */
 }
+/* Estilo para el título de la sección del lugar */
+.section h3 {
+  font-size: 1.2rem; /* Tamaño de fuente para escritorio */
+  color: #5a8b9b; /* Color del texto */
+  text-align: center; /* Centrar el texto */
+  margin-bottom: 10px; /* Espacio inferior */
+  text-transform: uppercase; /* Convertir a mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+/* Estilo para el párrafo de la sección del lugar */
+.section p {
+  font-size: 2.2rem; /* Tamaño de fuente para escritorio */
+  color: #333; /* Color del texto */
+  text-align: center; /* Centrar el texto */
+  margin: 0 20px; /* Margen lateral */
+  line-height: 1.6; /* Altura de línea para mejor legibilidad */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .section h3 {
+      font-size: 1.0rem; /* Tamaño de fuente más pequeño en móviles */
+  }
+
+  .section p {
+      font-size: 1rem; /* Tamaño de fuente más pequeño en móviles */
+      margin: 0 10px; /* Margen lateral reducido */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .section h3 {
+      font-size: 1.0rem; /* Tamaño intermedio en tabletas */
+  }
+
+  .section p {
+      font-size: 1.1rem; /* Tamaño intermedio en tabletas */
+  }
+}
+
