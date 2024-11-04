@@ -110,28 +110,32 @@ body, html {
 
 /* Estilo general para la sección del lugar */
 .section {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  /*margin-top: 150px; /* Agrega espacio en la parte superior */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: #5a8b9b;
   background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
   padding: 20px;
   border-radius: 15px; /* Bordes redondeados */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto flotante */
-  width: 80%; /* Ancho para escritorio */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para efecto flotante */
+  width: 80%; /* Ancho general para escritorio */
   max-width: 600px;
-  z-index: 1;
+  margin: 100px auto 0 auto; /* Margen superior para espacio y centrado horizontal */
+  text-align: center;
 }
+
+
 /* Responsividad para el iframe del mapa */
 .section iframe {
   width: 100%; /* Ancho responsivo */
-  height: auto;
   max-width: 550px;
+  height: auto;
   border: 0;
-  border-radius: 10px; /* Bordes redondeados en el mapa */
+  border-radius: 10px; /* Bordes redondeados */
 }
+
 /* Ajustes para móviles */
 @media (max-width: 768px) {
   .section {
@@ -149,12 +153,13 @@ body, html {
     font-size: 1.1rem;
     margin: 0 10px;
   }
-  
+
   .section iframe {
-    max-width: 100%; /* El mapa ocupará todo el ancho en móviles */
+    max-width: 100%; /* El mapa ocupa todo el ancho en móviles */
     height: 250px; /* Altura del mapa en móviles */
   }
 }
+
 /* Ajustes para tabletas */
 @media (min-width: 769px) and (max-width: 1024px) {
   .section {
@@ -171,7 +176,7 @@ body, html {
     font-size: 1.2rem;
     margin: 0 15px;
   }
-  
+
   .section iframe {
     max-width: 90%;
     height: 350px;
@@ -253,3 +258,14 @@ body, html {
   }
 }
 
+/* Animación de desvanecimiento */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

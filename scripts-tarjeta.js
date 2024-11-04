@@ -11,7 +11,7 @@ function mostrarLugar() {
       setTimeout(() => {
           lugarSection.style.opacity = 1; // Hacer que aparezca lentamente
       }, 50); // Retraso breve antes de aplicar la opacidad para suavizar la transición
-  }, 1500); // Tiempo para que desaparezca completamente
+  }, 5000); // Tiempo para que desaparezca completamente
 }
 
 // Función para mostrar el contenido de la tarjeta
@@ -21,9 +21,9 @@ function mostrarContenido() {
       lugarSection.style.display = 'none'; // Asegurarse de que la sección esté oculta
       contenido.style.display = 'block'; // Mostrar el contenido
       setTimeout(() => {
-          contenido.style.opacity = 1; // Hacer que aparezca lentamente
+        contenido.style.opacity = 1; // Hacer que aparezca lentamente
       }, 50); // Retraso breve antes de aplicar la opacidad para suavizar la transición
-  }, 1500); // Tiempo para que desaparezca completamente
+  }, 5000); // Tiempo para que desaparezca completamente
 }
 
 // Función para iniciar el ciclo de alternancia
@@ -31,7 +31,7 @@ function iniciarCiclo() {
     mostrarLugar(); // Mostrar la sección del lugar después de 4 segundos
     setTimeout(() => {
         mostrarContenido(); // Volver a mostrar el contenido después de otros 4 segundos
-    }, 8000); // Tiempo de espera
+    }, 1000); // Tiempo de espera
 }
 
 // Llamar a la función al cargar la página
@@ -46,5 +46,5 @@ setInterval(() => {
     mostrarLugar();
     setTimeout(() => {
         mostrarContenido();
-    }, 8000);
-}, 16000); // Cada 8 segundos se repite el ciclo
+    }, 4000);
+}, 8000); // Cada 8 segundos se repite el ciclo
