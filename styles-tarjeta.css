@@ -40,6 +40,31 @@ body, html {
   }
 }
 
+/* Estilo para el marco circular */
+.marco {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el marco en la página */
+  width: 80vw; /* Ancho del marco, se puede ajustar */
+  height: 80vw; /* Alto del marco, se puede ajustar */
+  max-width: 300px; /* Ancho máximo del marco */
+  max-height: 300px; /* Alto máximo del marco */
+  border-radius: 50%; /* Hace que el marco sea circular */
+  border: 10px solid white; /* Color y grosor del borde del marco */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo para la foto dentro del marco */
+.foto {
+  width: 100%; /* Hace que la imagen llene todo el marco */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 50%; /* Hace que la imagen sea circular */
+}
+
 /* Estilo para el efecto de brillo */
 .bright-effect {
   animation: brightness 0.5s forwards;
