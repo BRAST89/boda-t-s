@@ -82,7 +82,28 @@ body, html {
 }
 
 .titulo p {
-  font-size: 2vw; /* Tamaño responsivo */
+  font-size: 2.5vw; /* Aumentado el tamaño responsivo para móviles */
+}
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .titulo h1 {
+    font-size: 7vw; /* Tamaño más grande en móviles */
+  }
+
+  .titulo p {
+    font-size: 5vw; /* Tamaño más grande en móviles */
+  }
+}
+
+/* Media query para tabletas */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .titulo h1 {
+    font-size: 6.5vw; /* Tamaño intermedio en tabletas */
+  }
+
+  .titulo p {
+    font-size: 4.5vw; /* Tamaño intermedio en tabletas */
+  }
 }
 
 /* Estilo para el efecto de brillo */
@@ -105,3 +126,4 @@ body, html {
   height: 100vh;
   position: relative;
 }
+
