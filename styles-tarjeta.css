@@ -285,7 +285,7 @@ body, html {
 
 /* Ajustes para los párrafos en .event-info */
 .event-info p {
-  font-size: 2.2rem; /* Tamaño de fuente para escritorio, igual al de la sección */
+  font-size: 2.5rem; /* Tamaño de fuente para escritorio, igual al de la sección */
   margin: 0 20px; /* Margen lateral */
   line-height: 1.6; /* Altura de línea para mejor legibilidad */
 }
@@ -293,6 +293,6 @@ body, html {
 /* Responsividad */
 @media (max-width: 768px) {
   .event-info p {
-      font-size: 1rem; /* Tamaño de fuente más pequeño en móviles */
+      font-size: 1.5rem; /* Tamaño de fuente más pequeño en móviles */
   }
 }
