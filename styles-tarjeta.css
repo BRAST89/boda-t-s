@@ -296,3 +296,53 @@ body, html {
       font-size: 1.5rem; /* Tamaño de fuente más pequeño en móviles */
   }
 }
+/* Estilo para la sección de vestuario */
+#vestuario {
+  display: none; /* Ocultar la sección de vestuario inicialmente */
+  opacity: 0; /* Asegurarse de que no sea visible */
+  transition: opacity 0.5s; /* Transición suave */
+  color: #5a8b9b; /* Mismo color */
+  font-family: 'Parisienne', cursive; /* Mismo tipo de letra */
+  text-align: center; /* Centrar el texto */
+  margin-top: 80px;
+}
+
+#vestuario p {
+  font-size: 2.2rem;
+  line-height: 1.6;
+  margin: 10px 20px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  #vestuario p {
+      font-size: 1rem; /* Tamaño de fuente más pequeño en dispositivos móviles */
+  }
+}
+/* Ajustes para la imagen de vestuario */
+.imagen-vestuario {
+  width: 100%;        /* Ocupa el ancho completo del contenedor */
+  height: auto;       /* Mantiene la proporción de la imagen */
+  max-width: 600px;   /* Limita el ancho máximo para dispositivos grandes */
+  display: block;     /* Asegura que sea un bloque y no cause desbordamiento */
+  margin: 15px auto;  /* Centra la imagen y añade espacio superior e inferior */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .imagen-vestuario {
+      max-width: 90%; /* Limita aún más el ancho en pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  .imagen-vestuario {
+      max-width: 100%; /* Asegura que la imagen se ajuste a pantallas pequeñas */
+  }
+}
+
+/* Ajuste para que el contenedor de vestuario no desborde */
+#vestuario {
+  padding: 20px;      /* Añade padding para dar espacio alrededor de la imagen */
+  text-align: center; /* Centra el texto y la imagen dentro de la sección */
+}
