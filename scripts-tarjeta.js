@@ -2,6 +2,22 @@
 const contenido = document.querySelector('.tarjeta'); // Seleccionamos la tarjeta que contiene el marco y la foto
 const lugarSection = document.querySelector('#lugar');
 
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButtons = document.querySelectorAll('.toggle-button');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const details = this.nextElementSibling; // Obtener el siguiente elemento (event-details)
+            if (details.style.display === 'none' || details.style.display === '') {
+                details.style.display = 'block'; // Mostrar detalles
+            } else {
+                details.style.display = 'none'; // Ocultar detalles
+            }
+        });
+    });
+});
+
+
 // Función para mostrar la sección del lugar
 function mostrarLugar() {
   contenido.style.opacity = 0; // Hacer que el contenido desaparezca lentamente
@@ -11,7 +27,7 @@ function mostrarLugar() {
       setTimeout(() => {
           lugarSection.style.opacity = 1; // Hacer que aparezca lentamente
       }, 50); // Retraso breve antes de aplicar la opacidad para suavizar la transición
-  }, 5000); // Tiempo para que desaparezca completamente
+  }, 800); // Tiempo para que desaparezca completamente
 }
 
 // Función para mostrar el contenido de la tarjeta
@@ -23,7 +39,7 @@ function mostrarContenido() {
       setTimeout(() => {
         contenido.style.opacity = 1; // Hacer que aparezca lentamente
       }, 50); // Retraso breve antes de aplicar la opacidad para suavizar la transición
-  }, 5000); // Tiempo para que desaparezca completamente
+  }, 800); // Tiempo para que desaparezca completamente
 }
 
 // Función para iniciar el ciclo de alternancia
