@@ -87,11 +87,11 @@ body, html {
 /* Media query para dispositivos móviles */
 @media (max-width: 768px) {
   .titulo h1 {
-    font-size: 8vw; /* Tamaño más grande en móviles */
+    font-size: 7vw; /* Tamaño más grande en móviles */
   }
 
   .titulo p {
-    font-size: 6vw; /* Tamaño más grande en móviles */
+    font-size: 5vw; /* Tamaño más grande en móviles */
   }
 }
 
