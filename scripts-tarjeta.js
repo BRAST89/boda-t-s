@@ -4,26 +4,26 @@ const lugarSection = document.querySelector('#lugar');
 
 // Función para mostrar la sección del lugar
 function mostrarLugar() {
-    contenido.style.opacity = 0; // Hacer que el contenido desaparezca
-    setTimeout(() => {
-        contenido.style.display = 'none'; // Ocultar el contenido de la invitación
-        lugarSection.style.display = 'block'; // Mostrar la sección del lugar
-        setTimeout(() => {
-            lugarSection.style.opacity = 1; // Hacer que aparezca
-        }, 80); // Esperar un poco para aplicar la opacidad
-    }, 800); // Tiempo para que desaparezca
+  contenido.style.opacity = 0; // Hacer que el contenido desaparezca lentamente
+  setTimeout(() => {
+      contenido.style.display = 'none'; // Ocultar el contenido de la invitación
+      lugarSection.style.display = 'block'; // Mostrar la sección del lugar
+      setTimeout(() => {
+          lugarSection.style.opacity = 1; // Hacer que aparezca lentamente
+      }, 500); // Retraso breve antes de aplicar la opacidad para suavizar la transición
+  }, 1500); // Tiempo para que desaparezca completamente
 }
 
 // Función para mostrar el contenido de la tarjeta
 function mostrarContenido() {
-    lugarSection.style.opacity = 0; // Hacer que la sección del lugar desaparezca
-    setTimeout(() => {
-        lugarSection.style.display = 'none'; // Asegurarse de que la sección esté oculta
-        contenido.style.display = 'block'; // Mostrar el contenido
-        setTimeout(() => {
-            contenido.style.opacity = 1; // Hacer que aparezca
-        }, 80); // Esperar un poco para aplicar la opacidad
-    }, 800); // Tiempo para que desaparezca
+  lugarSection.style.opacity = 0; // Hacer que la sección del lugar desaparezca lentamente
+  setTimeout(() => {
+      lugarSection.style.display = 'none'; // Asegurarse de que la sección esté oculta
+      contenido.style.display = 'block'; // Mostrar el contenido
+      setTimeout(() => {
+          contenido.style.opacity = 1; // Hacer que aparezca lentamente
+      }, 500); // Retraso breve antes de aplicar la opacidad para suavizar la transición
+  }, 1500); // Tiempo para que desaparezca completamente
 }
 
 // Función para iniciar el ciclo de alternancia
@@ -31,14 +31,14 @@ function iniciarCiclo() {
     mostrarLugar(); // Mostrar la sección del lugar después de 4 segundos
     setTimeout(() => {
         mostrarContenido(); // Volver a mostrar el contenido después de otros 4 segundos
-    }, 6000); // Tiempo de espera
+    }, 8000); // Tiempo de espera
 }
 
 // Llamar a la función al cargar la página
 window.onload = () => {
     contenido.style.opacity = 1; // Asegurarnos de que el contenido esté visible al inicio
     lugarSection.style.display = 'none'; // Asegurarse de que la sección del lugar no sea visible al inicio
-    setTimeout(iniciarCiclo, 6000); // Iniciar el ciclo después de 4 segundos
+    setTimeout(iniciarCiclo, 4000); // Iniciar el ciclo después de 4 segundos
 };
 
 // Repetir el ciclo indefinidamente
@@ -46,10 +46,5 @@ setInterval(() => {
     mostrarLugar();
     setTimeout(() => {
         mostrarContenido();
-    }, 6000);
-}, 12000); // Cada 8 segundos se repite el ciclo
-
-
-
-
-
+    }, 8000);
+}, 16000); // Cada 8 segundos se repite el ciclo

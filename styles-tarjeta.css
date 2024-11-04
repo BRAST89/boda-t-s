@@ -56,6 +56,7 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 2; /* Hacerlo visible */
 }
 
 /* Estilo para la foto dentro del marco */
@@ -123,7 +124,7 @@ body, html {
 /* Estilos para mostrar el lugar */
 #lugar.visible {
   display: block; /* Mostrar la sección del lugar */
-  opacity: 1; /* Hacerlo visible */
+  opacity: 2; /* Hacerlo visible */
 }
 
 /* Responsividad del iframe */
