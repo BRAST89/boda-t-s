@@ -60,13 +60,13 @@ function mostrarContenido() {
 
 // Función para iniciar el ciclo de alternancia
 function iniciarCiclo() {
-    mostrarLugar(); // Mostrar la sección del lugar después de 4 segundos
+    mostrarLugar(); // Mostrar la sección del lugar
     setTimeout(() => {
-        mostrarVestuario(); // Mostrar la sección de vestuario después de 4 segundos más
+        mostrarVestuario(); // Mostrar la sección de vestuario
         setTimeout(() => {
-            mostrarContenido(); // Volver a mostrar el contenido después de otros 4 segundos
-        }, 4000);
-    }, 4000);
+            mostrarContenido(); // Volver a mostrar el contenido
+        }, 8000); // Tiempo que se muestra la sección de vestuario
+    }, 8000); // Tiempo que se muestra la sección del lugar
 }
 
 // Llamar a la función al cargar la página
@@ -81,4 +81,4 @@ window.onload = () => {
 // Repetir el ciclo indefinidamente
 setInterval(() => {
     iniciarCiclo();
-}, 12000); // Cada 12 segundos se repite el ciclo completo (4s para cada sección)
+}, 32000); // Cada 24 segundos se repite el ciclo completo (8s para cada sección)
